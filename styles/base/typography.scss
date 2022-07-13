@@ -1,0 +1,25 @@
+@layer components{
+
+    //TEXT
+    .text-header{
+        @apply text-2xl font-bold mb-4 text-slate-900 dark:text-slate-100;
+    } 
+    .text-regular{
+        @apply text-base text-slate-900 dark:text-white;
+    }
+    .text-light{
+        @apply text-gray-600 text-lg font-light;
+    }
+    .text-tiny{
+        @apply text-[12px] text-gray-600;
+    }
+    .text-footer{
+        @apply font-bold text-black text-base dark:text-white;
+    }
+    .blog-title{
+        @apply text-xl font-sans font-extralight;
+    }
+    .blog-text{
+        @apply text-base text-slate-900;
+    }
+}

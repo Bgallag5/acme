@@ -1,0 +1,18 @@
+.main__header{
+    height: 20rem;
+    width: 100%;
+    // position: relative;
+    background: url('../assets/images/hero.jpg');
+    background-position: cover;
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+
+    &-nav{
+        display: flex;
+        flex-direction: row;
+        width: 100%;
+        justify-content: space-between;
+        padding: 1rem;
+
+    }
+}
