@@ -3,7 +3,7 @@ import Image from 'next/image';
 
 export default function Article() {
   return (
-    <div className='w-1/3 h-auto flex flex-col text-left dark:bg-white rounded'>
+    <div className='recent__article absolute top-1 left-0 test w-1/3 flex-1 m-1 h-auto flex flex-col text-left dark:bg-white rounded'>
         <Image className='rounded shadow-lg shadow-black' src={require('../../assets/images/blog-1.jpg')} alt="blog post" />
         <div className='p-2 flex flex-col'>
         <h2 className='blog-title'>Article Title</h2>
