@@ -9,17 +9,17 @@ import About from "../components/About";
 
 export default function home() {
   return (
-      <div className="app__container h-auto">
-    <div className="bg-white dark:bg-slate-900 h-auto relative">
-      <Header />
-      <div className="page-content">
-        <Intro />
-        <About />
-        <RecentArticles />
-        <CTA />
-        <Footer />
+    <div className="app__container h-auto">
+      <div className="bg-white dark:bg-slate-900 h-auto relative">
+        <Header className={'main__header'} />
+        <div className="page-content">
+          <Intro />
+          <About />
+          <RecentArticles />
+          <CTA />
+          <Footer />
+        </div>
       </div>
-    </div>
     </div>
   );
 }

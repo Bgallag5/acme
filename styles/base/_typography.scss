@@ -21,12 +21,24 @@
         font-family: 'Montserrat';
         @apply font-bold text-black text-base dark:text-white;
     }
+    .blog-title-card{
+        font-family: 'Montserrat';
+        @apply text-xl font-extralight;
+    }
+    .blog-text-card{
+        font-family: 'Montserrat';
+        @apply text-base text-black;
+    }
     .blog-title{
         font-family: 'Montserrat';
-        @apply text-xl font-sans font-extralight;
+        @apply text-2xl text-slate-600;
     }
     .blog-text{
         font-family: 'Montserrat';
         @apply text-base text-black;
+    }
+    .text-nav{
+        font-family: 'Montserrat';
+        @apply text-sm text-black ;
     }
 }
