@@ -3,7 +3,7 @@ import Image from 'next/image';
 
 export default function CTA() {
   return (
-    <div className='h-auto w-2/3 m-auto flex flex-col text-left '>
+    <div id='CTA' className='section h-auto w-2/3 m-auto flex flex-col text-left '>
         <h2 className='text-header'>Inbox</h2>
         <p className='text-regular'>Knowledge Letters</p>
         <div className=' flex h-auto bg-cover mt-10'>
@@ -12,7 +12,7 @@ export default function CTA() {
         <form className='flex flex-row justify-between gap-1 py-6'>
             <input className='cta__input' placeholder='Name' />
             <input className='cta__input'  placeholder='Email' />
-            <button className='btn  btn-dark'>Subscribe</button>
+            <button className='btn  btn-subscribe'>Subscribe</button>
         </form>
     </div>
   )

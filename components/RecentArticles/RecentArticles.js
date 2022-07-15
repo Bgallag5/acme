@@ -1,5 +1,7 @@
 import React, { useEffect, useRef } from "react";
 import Article from "./Article";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faStar,faAngleRight, faAngleLeft } from "@fortawesome/free-solid-svg-icons";
 
 export default function RecentArticles() {
   const currentSlide = useRef(0);
@@ -43,10 +45,10 @@ export default function RecentArticles() {
     <section className="section flex-col text-left relative">
       <div className="flex flex-col text-left">
         <h1 className="text-header">Blog</h1>
-        <p className="text-regular">Lastest thoughts, news and ideas</p>
+        <p className="text-regular">Lastest thoughts, news, and ideas</p>
       </div>
       <div className="flex mt-8 w-full flex-row gap-3 justify-center text-left ">
-        <button onClick={() => handleSliderBtn("left")}>{"<"}</button>
+        <button className="slider__btn" onClick={() => handleSliderBtn("left")}><FontAwesomeIcon icon={faAngleLeft} /> </button>
         <div className="relative w-full h-80 flex overflow-x-hidden items-center flex-row gap-3">
           <Article title={"Article 1"} />
           <Article title={"Article 2"} />
@@ -55,7 +57,7 @@ export default function RecentArticles() {
           <Article title={"Article 5"} />
           <Article title={"Article 6"} />
         </div>
-        <button onClick={() => handleSliderBtn("right")}>{">"}</button>
+        <button className="slider__btn" onClick={() => handleSliderBtn("right")}> <FontAwesomeIcon icon={faAngleRight} /> </button>
       </div>
     </section>
   );

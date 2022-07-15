@@ -1,25 +1,32 @@
-@layer components{
+@layer base{
 
     //TEXT
     .text-header{
+        font-family: 'Montserrat';
         @apply text-2xl font-bold mb-4 text-slate-600 dark:text-slate-100 ;
     } 
     .text-regular{
-        @apply text-base text-slate-900 dark:text-white;
+        font-family: 'Montserrat';
+        @apply text-base text-black dark:text-white;
     }
     .text-light{
+        font-family: 'Montserrat';
         @apply text-gray-600 text-lg font-light;
     }
     .text-tiny{
+        font-family: 'Montserrat';
         @apply text-[12px] text-gray-600;
     }
     .text-footer{
+        font-family: 'Montserrat';
         @apply font-bold text-black text-base dark:text-white;
     }
     .blog-title{
+        font-family: 'Montserrat';
         @apply text-xl font-sans font-extralight;
     }
     .blog-text{
-        @apply text-base text-slate-900;
+        font-family: 'Montserrat';
+        @apply text-base text-black;
     }
 }

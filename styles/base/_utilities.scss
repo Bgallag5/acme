@@ -10,6 +10,7 @@
     flex-direction: column;
     margin-top: 6rem;
     margin-bottom: 6rem;
+    // font-family: 'Montserrat';
 }
 
 .hidden{    
@@ -28,8 +29,8 @@
         @apply px-32 ;
     }
 
-
     .cta__input{
+        font-family: 'Montserrat';
         @apply border-slate-900 text-base text-black border-solid border-[1px] w-2/5 outline-none p-1 rounded focus:shadow-sm focus:shadow-black;
     }
 }

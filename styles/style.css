@@ -27,6 +27,7 @@
     @apply px-32;
   }
   .cta__input {
+    font-family: "Montserrat";
     @apply border-slate-900 text-base text-black border-solid border-[1px] w-2/5 outline-none p-1 rounded focus:shadow-sm focus:shadow-black;
   }
 }
@@ -67,33 +68,47 @@ a {
 
 @layer base {
   .btn {
-    @apply text-white text-lg hover:shadow-md rounded hover:shadow-black active:translate-y-[1px];
+    font-family: "Montserrat";
+    @apply text-white dark:text-slate-700 flex flex-col items-center justify-center bg-slate-600 dark:bg-slate-300 text-lg p-1 hover:shadow-md rounded hover:shadow-black dark:hover:shadow-none active:translate-y-[1px];
   }
-  .btn-dark {
-    @apply bg-slate-600 w-2/3;
+  .btn-subscribe {
+    @apply w-2/3 font-bold;
+  }
+  .btn-connect {
+    @apply p-2 mt-6 font-bold;
+  }
+  .slider__btn {
+    @apply text-xl text-white dark:text-slate-700 h-full w-8 m-auto rounded-full bg-slate-600 dark:bg-slate-300;
   }
 }
-@layer components {
+@layer base {
   .text-header {
+    font-family: "Montserrat";
     @apply text-2xl font-bold mb-4 text-slate-600 dark:text-slate-100;
   }
   .text-regular {
-    @apply text-base text-slate-900 dark:text-white;
+    font-family: "Montserrat";
+    @apply text-base text-black dark:text-white;
   }
   .text-light {
+    font-family: "Montserrat";
     @apply text-gray-600 text-lg font-light;
   }
   .text-tiny {
+    font-family: "Montserrat";
     @apply text-[12px] text-gray-600;
   }
   .text-footer {
+    font-family: "Montserrat";
     @apply font-bold text-black text-base dark:text-white;
   }
   .blog-title {
+    font-family: "Montserrat";
     @apply text-xl font-sans font-extralight;
   }
   .blog-text {
-    @apply text-base text-slate-900;
+    font-family: "Montserrat";
+    @apply text-base text-black;
   }
 }
 
