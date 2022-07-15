@@ -75,7 +75,7 @@ a {
     @apply w-2/3 font-bold;
   }
   .btn-connect {
-    @apply p-2 mt-6 font-bold;
+    @apply p-2 mt-6 rounded-full;
   }
   .slider__btn {
     @apply text-xl text-white dark:text-slate-700 h-full w-8 m-auto rounded-full bg-slate-600 dark:bg-slate-300;
