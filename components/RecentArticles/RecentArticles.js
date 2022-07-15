@@ -1,41 +1,43 @@
-import React, {useEffect, useState} from "react";
+import React, { useEffect, useRef } from "react";
 import Article from "./Article";
 
 export default function RecentArticles() {
-const [currentSlide, setCurrentSlide] = useState(0)
+  const currentSlide = useRef(0);
 
   //position slides on load
   useEffect(() => {
-positionSlides();
-
+    positionSlides();
   }, []);
 
   const positionSlides = () => {
-    const slides = Array.from(document.querySelectorAll('.recent__article')) ;
-    console.log(slides);
+    const slides = Array.from(document.querySelectorAll(".recent__article"));
+    // console.dir(slides);
 
     slides.forEach((slide, i) => {
-      let offset = (i - currentSlide) * 100;
-      // slide.classList.remove(`left-0`);
-      if (currentSlide > i) {
-        slide.style.transform = `translateX(-${offset}%)`;
-      } else if (currentSlide === i ){
-        slide.style.transform = `translateX(-${offset}%)`;
-      }
-       else {
-        // slide.style.left = `${offset}%`;
+      //calc offset for each slide based on current slide
+      let offset = (i - currentSlide.current) * 100;
+
+      if (currentSlide.current > i) {
+        slide.style.transform = `translateX(${offset}%)`;
+      } else if (currentSlide.current === i) {
+        slide.style.transform = `translateX(${offset}%)`;
+      } else {
         slide.style.transform = `translateX(${offset}%)`;
       }
-    })
-
+    });
   };
 
   const handleSliderBtn = (direction) => {
-    const offset = direction === 'left' ? -1 : 1;
-    setCurrentSlide(prev => prev + offset);
-    positionSlides();
-  }
+    const slides = Array.from(document.querySelectorAll(".recent__article"));
+    const offset = direction === "left" ? -1 : 1;
 
+    //bookend slider functionality
+    if (currentSlide.current + offset >= slides.length - 2) return;
+    if (currentSlide.current + offset < 0) return;
+
+    currentSlide.current = currentSlide.current + offset;
+    positionSlides();
+  };
 
   return (
     <section className="section flex-col text-left relative">
@@ -44,16 +46,16 @@ positionSlides();
         <p className="text-regular">Lastest thoughts, news and ideas</p>
       </div>
       <div className="flex mt-8 w-full flex-row gap-3 justify-center text-left ">
-        <button onClick={() => handleSliderBtn('left')}>{"<"}</button>
-        <div className="relative test w-full h-80 flex overflow-x-hidden items-center justify-center flex-row gap-3">
-        <Article title={'Article 1'} />
-        <Article title={'Article 2'} />
-        <Article title={'Article 3'} />
-        <Article title={'Article 4'} />
-        <Article title={'Article 5'} />
-        <Article title={'Article 6'} />
+        <button onClick={() => handleSliderBtn("left")}>{"<"}</button>
+        <div className="relative w-full h-80 flex overflow-x-hidden items-center flex-row gap-3">
+          <Article title={"Article 1"} />
+          <Article title={"Article 2"} />
+          <Article title={"Article 3"} />
+          <Article title={"Article 4"} />
+          <Article title={"Article 5"} />
+          <Article title={"Article 6"} />
         </div>
-        <button onClick={() => handleSliderBtn('right')}>{">"}</button>
+        <button onClick={() => handleSliderBtn("right")}>{">"}</button>
       </div>
     </section>
   );

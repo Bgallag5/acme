@@ -8,8 +8,18 @@
   width: 100%;
   display: flex;
   flex-direction: column;
-  margin-top: 8rem;
-  margin-bottom: 20rem;
+  margin-top: 6rem;
+  margin-bottom: 6rem;
+}
+
+.hidden {
+  visibility: none;
+  opacity: 0;
+}
+
+.recent__article {
+  transition: all 2s ease-out;
+  cursor: pointer;
 }
 
 @layer components {
@@ -17,7 +27,7 @@
     @apply px-32;
   }
   .cta__input {
-    @apply border-slate-900 border-solid border-[1px] w-2/5 outline-none p-1 rounded text-regular focus:shadow-sm focus:shadow-black;
+    @apply border-slate-900 text-base text-black border-solid border-[1px] w-2/5 outline-none p-1 rounded focus:shadow-sm focus:shadow-black;
   }
 }
 @tailwind base;
@@ -65,7 +75,7 @@ a {
 }
 @layer components {
   .text-header {
-    @apply text-2xl font-bold mb-4 text-slate-900 dark:text-slate-100;
+    @apply text-2xl font-bold mb-4 text-slate-600 dark:text-slate-100;
   }
   .text-regular {
     @apply text-base text-slate-900 dark:text-white;

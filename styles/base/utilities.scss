@@ -8,8 +8,18 @@
     width: 100%;
     display: flex;
     flex-direction: column;
-    margin-top: 8rem;
-    margin-bottom: 20rem;
+    margin-top: 6rem;
+    margin-bottom: 6rem;
+}
+
+.hidden{    
+    visibility: none;
+    opacity: 0;
+}
+
+.recent__article{
+    transition: all 2s ease-out;
+    cursor: pointer;
 }
 
 
@@ -20,6 +30,6 @@
 
 
     .cta__input{
-        @apply border-slate-900 border-solid border-[1px] w-2/5 outline-none p-1 rounded text-regular focus:shadow-sm focus:shadow-black;
+        @apply border-slate-900 text-base text-black border-solid border-[1px] w-2/5 outline-none p-1 rounded focus:shadow-sm focus:shadow-black;
     }
 }

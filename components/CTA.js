@@ -3,7 +3,7 @@ import Image from 'next/image';
 
 export default function CTA() {
   return (
-    <div className='h-auto w-2/3 m-auto flex flex-col text-left my-12'>
+    <div className='h-auto w-2/3 m-auto flex flex-col text-left '>
         <h2 className='text-header'>Inbox</h2>
         <p className='text-regular'>Knowledge Letters</p>
         <div className=' flex h-auto bg-cover mt-10'>
