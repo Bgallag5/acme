@@ -10,7 +10,7 @@ export default function MoreArticles() {
         <BlogArticle title={'Back End Dev'} img={'blog-3.jpg'}  />
         </div>
         <div className='flex flex-row gap-6 justify-between w-auto '>
-        <BlogArticle title={'Design'} img={'blog-1.jpg'} />
+        <BlogArticle title={'Design'} id={"design"} img={'blog-1.jpg'} />
         <BlogArticle title={'Web'} img={'blog-4.jpg'}  className={''}  />
         <BlogArticle title={'App'} img={'blog-5.jpg'}   />
         </div>

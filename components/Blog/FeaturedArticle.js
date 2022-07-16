@@ -11,7 +11,7 @@ export default function FeaturedArticle() {
       <div className='p-2 flex flex-col gap-1 flex-1 justify-center'>
         <h2 className='blog-title'>Title</h2>
         <p className='blog-text'>Article text about the stuff</p>
-        <div className='text-tiny flex flex-row mt-5 gap-1'>
+        <div className='text-tiny dark:text-white flex flex-row mt-10 gap-1'>
             <p>Oct 8</p>
             <p>5 min read</p>
         </div>

@@ -34,7 +34,7 @@ export default function RecentArticles() {
     const offset = direction === "left" ? -1 : 1;
 
     //bookend slider functionality
-    if (currentSlide.current + offset >= slides.length - 2) return;
+    if (currentSlide.current + offset >= slides.length - 3) return;
     if (currentSlide.current + offset < 0) return;
 
     currentSlide.current = currentSlide.current + offset;
@@ -49,7 +49,7 @@ export default function RecentArticles() {
       </div>
       <div className="flex mt-8 w-full flex-row  gap-3 justify-center text-left ">
         <button className="slider__btn" onClick={() => handleSliderBtn("left")}><FontAwesomeIcon icon={faAngleLeft} /> </button>
-        <div className="relative w-full h-80 flex overflow-x-hidden items-center flex-row sm:flex-col gap-3">
+        <div className="relative w-full h-64 flex overflow-x-hidden items-center flex-row sm:flex-col gap-3">
           <Article title={"Article 1"} />
           <Article title={"Article 2"} />
           <Article title={"Article 3"} />

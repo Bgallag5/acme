@@ -3,9 +3,10 @@
     width: 100%;
     // position: relative;
     background: url('../assets/images/hero.jpg');
-    background-position: cover;
+    background-position: center;
     background-repeat: no-repeat;
-    background-size: 100% 85%;
+    background-size: 100% 100%;
+    margin-bottom: 1rem;
 
     &-nav{
         display: flex;
@@ -18,13 +19,13 @@
 }
 
 .blog__header{
-    height: 20rem;
+    height:20rem;
     width: 100%;
-    // position: relative;
+    margin-bottom: 1rem;
     background: url('../assets/images/blog.jpg');
-    background-position: cover;
+    background-position: center;
     background-repeat: no-repeat;
-    background-size: 100% 85%;
+    background-size: 100% 100%;
 
     &-nav{
         display: flex;

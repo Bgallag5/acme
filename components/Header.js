@@ -12,7 +12,7 @@ export default function Header(props) {
   };
 
   return (
-    <header className={headerClass}>
+    <header className={`${headerClass}`}>
       <div className={`${headerClass}-nav`}>
         <a href="#" aria-label="home page">
           <Image

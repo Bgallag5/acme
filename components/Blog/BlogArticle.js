@@ -2,9 +2,9 @@ import React from "react";
 import Image from "next/image";
 
 export default function BlogArticle(props) {
-  const { title, className, img } = props;
+  const { title, className, img, id } = props;
   return (
-    <div className={`bg-slate-100 relative w-auto h-auto flex flex-col text-left dark:bg-white rounded ${className} cursor-pointer hover:bg-slate-300`}>
+    <div id={id} className={`bg-slate-100 relative w-auto h-auto flex flex-col text-left dark:bg-white rounded ${className} cursor-pointer hover:bg-slate-300`}>
       <Image
         className="rounded shadow-lg shadow-black"
         src={require(`../../assets/images/${img}`)}

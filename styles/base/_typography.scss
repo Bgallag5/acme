@@ -31,11 +31,15 @@
     }
     .blog-title{
         font-family: 'Montserrat';
-        @apply text-2xl text-slate-600;
+        @apply text-3xl text-slate-600 dark:text-slate-100;
     }
     .blog-text{
         font-family: 'Montserrat';
-        @apply text-base text-black;
+        @apply text-base text-black dark:text-slate-100;
+    }
+    .blog-nav-text {
+        font-family: 'Montserrat';
+        @apply text-base text-black dark:text-slate-100;
     }
     .text-nav{
         font-family: 'Montserrat';
