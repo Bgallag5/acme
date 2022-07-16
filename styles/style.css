@@ -112,7 +112,7 @@ a {
   .dark-mode-label::after {
     content: "Light";
     transition: all 0.5s ease-in-out;
-    @apply absolute text-center content-center flex flex-col justify-center items-center h-full w-0 top-0 left-auto rounded-full bg-slate-100 text-black transition-all duration-500;
+    @apply absolute text-center invisible content-center flex flex-col justify-center items-center h-full w-0 top-0 left-auto rounded-full bg-slate-100 text-slate-900 transition-all duration-500;
   }
   .dark-mode-input {
     transition: all 0.5s ease-in-out;
@@ -126,9 +126,13 @@ a {
   }
   .dark-mode-input:checked + label::after {
     width: 100%;
+    visibility: visible;
   }
 }
 @layer base {
+  .mons {
+    font-family: "Montserrat";
+  }
   .text-header {
     font-family: "Montserrat";
     @apply text-2xl font-bold mb-4 text-slate-600 dark:text-slate-100;

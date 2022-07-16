@@ -19,7 +19,7 @@ export default function Header(props) {
     <header className={`${headerClass}`}>
       <div className={`${headerClass}-nav`}>
         <a href="#" aria-label="home page">
-          <Image
+          <Image 
             width={75}
             height={40}
             alt="logo"

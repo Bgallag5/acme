@@ -1,6 +1,9 @@
 @layer base{
 
     //TEXT
+    .mons{
+        font-family: 'Montserrat';
+    }
     .text-header{
         font-family: 'Montserrat';
         @apply text-2xl font-bold mb-4 text-slate-600 dark:text-slate-100 ;
