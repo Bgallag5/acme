@@ -99,6 +99,33 @@ a {
   .slider__btn {
     @apply text-xl text-white dark:text-slate-700 h-full w-8 m-auto rounded-full bg-slate-600 dark:bg-slate-300;
   }
+  .dark-mode-label {
+    transition: all 0.5s ease-in-out;
+    @apply relative w-24 h-10 bg-white overflow-hidden rounded-full cursor-pointer;
+  }
+  .dark-mode-label::before {
+    content: "Dark";
+    transition: all 0.5s ease-in-out;
+    @apply absolute text-white opacity-100 text-center content-center flex flex-col justify-center items-center h-full w-full top-0 left-auto rounded-full bg-slate-900 transition-all duration-500;
+  }
+  .dark-mode-label::after {
+    content: "Light";
+    transition: all 0.5s ease-in-out;
+    @apply absolute text-center content-center flex flex-col justify-center items-center h-full w-0 top-0 left-auto rounded-full bg-slate-100 text-black transition-all duration-500;
+  }
+  .dark-mode-input {
+    transition: all 0.5s ease-in-out;
+    opacity: 0;
+    display: none;
+    @apply relative bg-black invisible;
+  }
+  .dark-mode-input:checked + label::before {
+    width: 0;
+    visibility: hidden;
+  }
+  .dark-mode-input:checked + label::after {
+    width: 100%;
+  }
 }
 @layer base {
   .text-header {

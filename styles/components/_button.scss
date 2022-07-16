@@ -1,20 +1,51 @@
-
-
-
-@layer base{
-    .btn{
-        font-family: 'Montserrat';
-        @apply text-white dark:text-slate-700 flex flex-col items-center justify-center bg-slate-600 dark:bg-slate-300 text-lg p-1 hover:shadow-md rounded hover:shadow-black dark:hover:shadow-none active:translate-y-[1px];
-    }
-    .btn-subscribe{
+@layer base {
+  .btn {
+    font-family: "Montserrat";
+    @apply text-white dark:text-slate-700 flex flex-col items-center justify-center bg-slate-600 dark:bg-slate-300 text-lg p-1 hover:shadow-md rounded hover:shadow-black dark:hover:shadow-none active:translate-y-[1px];
+  }
+  .btn-subscribe {
     @apply w-2/3 font-bold;
-    }
+  }
 
-    .btn-connect{
-        @apply  p-2 mt-6 rounded-full;
-    }
+  .btn-connect {
+    @apply p-2 mt-6 rounded-full;
+  }
 
-    .slider__btn{
-        @apply text-xl text-white dark:text-slate-700 h-full w-8 m-auto rounded-full bg-slate-600 dark:bg-slate-300;
+  .slider__btn {
+    @apply text-xl text-white dark:text-slate-700 h-full w-8 m-auto rounded-full bg-slate-600 dark:bg-slate-300;
+  }
+
+  .dark-mode-label {
+    transition: all 0.5s ease-in-out;
+    @apply relative w-24 h-10 bg-white overflow-hidden rounded-full cursor-pointer;
+    &::before {
+      content: "Dark";
+      transition: all 0.5s ease-in-out;
+      @apply absolute text-white opacity-100 text-center content-center flex flex-col justify-center items-center h-full w-full top-0 left-auto rounded-full bg-slate-900 transition-all duration-500;
     }
+    &::after {
+      content: "Light";
+      transition: all 0.5s ease-in-out;
+      @apply absolute text-center content-center flex flex-col justify-center items-center h-full w-0 top-0 left-auto rounded-full bg-slate-100 text-black transition-all duration-500;
+    }
+  }
+  .dark-mode-input {
+    transition: all 0.5s ease-in-out;
+    opacity: 0;
+    display: none;
+    @apply relative bg-black invisible;
+
+    &:checked + label {
+      &::before {
+        width: 0;
+        visibility: hidden;
+        // opacity: 0;
+      }
+      &::after {
+        width: 100%;
+        // opacity: 1;
+        // visibility: visible;
+      }
+    }
+  }
 }
