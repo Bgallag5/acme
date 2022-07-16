@@ -4,8 +4,8 @@ import Blog1 from "../../assets/images/blog-1.jpg";
 
 export default function FeaturedArticle() {
   return (
-    <div className="h-64 relative flex flex-row gap-4 m-auto w-5/6 justify-center my-12 mb-24">
-      <div className="h-full relative w-2/5 rounded">
+    <div className="h-64  relative flex flex-row gap-4 m-auto w-5/6 justify-center my-12 mb-24">
+      <div className="h-full relative w-2/5 rounded shadow-md">
         <Image className="rounded-md" src={Blog1} alt={"blog"} layout={'fill'} />
       </div>
       <div className='p-2 flex flex-col gap-1 flex-1 justify-center'>
