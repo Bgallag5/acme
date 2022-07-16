@@ -1,5 +1,5 @@
-import Head from "next/head";
 import React from "react";
+import Head from "next/head";
 import Header from "../components/Header";
 import Intro from "../components/Intro";
 import RecentArticles from "../components/RecentArticles/RecentArticles";

@@ -1,14 +1,15 @@
-import React, {useState} from "react";
+import React, { useContext } from "react";
 import Image from "next/image";
 import Link from "next/link";
+import { AppContext } from "../pages/_app";
 
 export default function Header(props) {
+  const { darkMode, toggleDarkMode } = useContext(AppContext);
+
   const headerClass = props.className;
-  const [darkMode, toggleDarkMode] = useState('Dark')
 
   const handleToggleDarkMode = () => {
-    // let newMode = darkMode === 'Dark' ? 'Light' : 'Dark';
-    // toggleDarkMode(newMode);
+    toggleDarkMode((prev) => !prev);
     const page = document.querySelector(".app__container");
     page.classList.toggle("dark");
     return;
@@ -33,16 +34,13 @@ export default function Header(props) {
             <li>
               <Link href="/blog"> Blog </Link>
             </li>
-            {/* <button
-              onClick={handleToggleDarkMode}
-              className="btn-dark-mode"
-            >
-
-            </button> */}
-            <input id="dark-mode" type={'checkbox'} onChange={handleToggleDarkMode} className={'dark-mode-input'}></input>
-            <label htmlFor="dark-mode" className="dark-mode-label">
-            </label>
-            {/* <label htmlFor='dark-mode' ></label > */}
+            <input
+              id="dark-mode"
+              type={"checkbox"}
+              onChange={handleToggleDarkMode}
+              className={"dark-mode-input"}
+            ></input>
+            <label htmlFor="dark-mode" className="dark-mode-label"></label>
           </ul>
         </nav>
       </div>

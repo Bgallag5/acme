@@ -88,9 +88,10 @@ a {
 @layer base {
   .btn {
     font-family: "Montserrat";
-    @apply text-white dark:text-slate-700 flex flex-col items-center justify-center bg-slate-600 dark:bg-slate-300 text-lg p-1 hover:shadow-md rounded hover:shadow-black dark:hover:shadow-none active:translate-y-[1px];
+    @apply text-white dark:text-slate-900 flex flex-col items-center justify-center bg-slate-600 dark:bg-slate-300 text-lg p-1 hover:shadow-md rounded hover:shadow-black dark:hover:shadow-none active:translate-y-[1px];
   }
   .btn-subscribe {
+    font-family: "Montserrat";
     @apply w-2/3 font-bold;
   }
   .btn-connect {
