@@ -24,7 +24,7 @@ export default function CTA() {
           <h1 className="mons text-3xl text-white dark:text-slate-900 font-bold tracking-wide mb-1">Join Our News Letter</h1>
           <p className="mons text-white dark:text-slate-900">{"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."}</p>
           <input className='cta__input w-72 mt-[10%] dark:text-slate-900 dark:placeholder:text-black'  placeholder='Email' />
-          <button className="w-48 p-2 shadow-sm shadow-gray-900  text-white rounded bg-indigo-400 dark:bg-indigo-600 mt-1 active:translate-y-[1px]">Subscribe</button>
+          <button className="w-48 p-2 shadow-sm shadow-gray-900  text-white rounded bg-indigo-400 dark:bg-indigo-600 mt-1 active:translate-y-[1px]">Join</button>
           </div>
         </div>
       </div>

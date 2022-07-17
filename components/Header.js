@@ -40,7 +40,7 @@ export default function Header(props) {
               onChange={handleToggleDarkMode}
               className={"dark-mode-input"}
             ></input>
-            <label htmlFor="dark-mode" className="dark-mode-label"></label>
+            <label htmlFor="dark-mode" className="dark-mode-label"><div className="dot"></div></label>
           </ul>
         </nav>
       </div>
