@@ -2,15 +2,20 @@
   height: 5rem;
   width: 100%;
   position: fixed;
-  background: transparent;
+  background-color: transparent;
+//   background-color: rgb(138, 166, 227, 1);
   top: 0;
   left: 0;
   transition: all 0.2s ease-in;
   z-index: 500;
 }
 
+.header__blue{
+      background-color: rgb(138, 166, 227, 1);
+}
+
 .header-scroll {
-  background-color: rgb(138, 166, 227, 0.9);
+  background-color: rgb(138, 166, 227, 0.95);
 
   & a,
   nav {

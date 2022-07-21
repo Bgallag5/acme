@@ -7,8 +7,8 @@ export default function CTA() {
       id="CTA"
       className="section h-screen w-full m-auto flex flex-col text-left "
     >
-      <h2 className="text-header mx-[10%]">Inbox</h2>
-      <p className="text-regular mx-[10%]">Knowledge Letters</p>
+      <h2 className="text-header w-[90%]">Inbox</h2>
+      <p className="text-regular w-[90%] mb-[1rem]">Knowledge Letters</p>
       <div className=" flex flex-row justify-end  m-auto w-4/5 h-auto bg-cover mt-10">
         <div className="relative flex flex-col bg-slate-700  dark:bg-slate-100  w-4/5 h-[60vh] mr-10 rounded-2xl">
           <div className="absolute bg-cover top-24 -left-[30%] w-2/5 h-full  my-auto  rounded-2xl">

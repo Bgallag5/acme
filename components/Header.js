@@ -20,6 +20,12 @@ export default function Header(props) {
   useEffect(() => {
     window.addEventListener('scroll', () => {
       console.log(window.scrollY);
+      if (window.scrollY >= 5){
+        headerRef.current.classList.add('header__blue')
+      }
+      if (window.scrollY < 5){
+        headerRef.current.classList.remove('header__blue')
+      }
 
       if (window.scrollY >= 300){
         headerRef.current.classList.add('header-scroll')

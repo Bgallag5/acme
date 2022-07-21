@@ -42,8 +42,8 @@ export default function RecentArticles() {
   };
 
   return (
-    <section className="section flex-col text-left relative">
-      <div className="flex flex-col text-left">
+    <section className="section flex-col text-left relative mb-[8rem]">
+      <div className="flex flex-col text-left w-[90%] mb-[1rem]">
         <h1 className="text-header">Blog</h1>
         <p className="text-regular">Lastest thoughts, news, and ideas</p>
       </div>

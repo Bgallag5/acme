@@ -8,8 +8,10 @@
   width: 100%;
   display: flex;
   flex-direction: column;
-  margin-top: 6rem;
-  margin-bottom: 6rem;
+  justify-content: center;
+  margin-top: 4rem;
+  margin-bottom: 4rem;
+  align-items: center;
 }
 
 .hidden {
@@ -55,15 +57,19 @@ a {
   height: 5rem;
   width: 100%;
   position: fixed;
-  background: transparent;
+  background-color: transparent;
   top: 0;
   left: 0;
   transition: all 0.2s ease-in;
   z-index: 500;
 }
 
+.header__blue {
+  background-color: rgb(138, 166, 227);
+}
+
 .header-scroll {
-  background-color: rgba(138, 166, 227, 0.9);
+  background-color: rgba(138, 166, 227, 0.95);
 }
 .header-scroll a,
 .header-scroll nav {
@@ -129,24 +135,24 @@ a {
   }
   .dark-mode-label {
     transition: all 0.5s ease-in-out;
-    @apply relative w-24 h-10 bg-black justify-end flex flex-row overflow-hidden rounded-full cursor-pointer;
+    @apply relative w-[6em] h-[2.5em] bg-slate-800 justify-end flex flex-row overflow-hidden  rounded-full cursor-pointer;
   }
   .dark-mode-label::before {
-    content: "Dark";
-    transition: all 0.5s ease-in;
-    @apply absolute text-white text-left opacity-100 pl-2  flex flex-col justify-center  h-full w-full top-0 left-auto rounded-full bg-slate-900 transition-all duration-500;
-  }
-  .dark-mode-label::after {
     content: "Light";
     transition: all 0.5s ease-in;
+    @apply absolute text-black text-left opacity-100 pl-2  flex flex-col justify-center  h-full w-full top-0  rounded-full bg-slate-100 transition-all duration-500;
+  }
+  .dark-mode-label::after {
+    content: "Dark";
+    transition: all 0.5s ease-in;
     transform: translateX(100%);
-    @apply absolute invisible text-right flex flex-col justify-center pr-2 h-full w-full top-0 left-auto rounded-full bg-slate-100 text-slate-900 transition-all duration-500;
+    @apply absolute invisible text-right flex flex-col justify-center pr-4  h-full w-full top-0 left-auto rounded-full bg-slate-800 text-white transition-all duration-500;
   }
   .dark-mode-input {
     transition: all 0.5s ease-in-out;
     opacity: 0;
     display: none;
-    @apply relative bg-black invisible;
+    @apply relative bg-slate-800 invisible;
   }
   .dark-mode-input:checked + label {
     @apply justify-start bg-white;
@@ -160,9 +166,12 @@ a {
     transform: translateX(0%);
     visibility: visible;
   }
+  .dark-mode-input:checked + label .dot {
+    @apply bg-gradient-to-bl from-slate-600 via-slate-100 to-slate-50 -translate-x-1;
+  }
   .dot {
-    transition: all 1s ease-in-out;
-    @apply absolute bg-blue-400 h-[2.5rem] w-[2.5rem] rounded-full z-20;
+    transition: color 0.5s ease-in-out;
+    @apply absolute translate-x-1 bg-gradient-to-br from-stone-400 via-stone-800 to-stone-900 h-[2.5em] w-[2.5em] rounded-full z-20;
   }
 }
 *, *::before, *::after {
@@ -204,6 +213,11 @@ a {
     @apply text-sm text-black;
   }
 }
+.text-clamp {
+  font-size: clamp(1rem, 100%, 1.1rem);
+  width: clamp(80%, 60vw, 90%);
+}
+
 @layer base {
   .blog__nav > li {
     transition: all 0.5s ease-in-out;
