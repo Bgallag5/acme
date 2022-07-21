@@ -51,6 +51,33 @@ a {
   box-sizing: border-box;
 }
 
+.header {
+  height: 5rem;
+  width: 100%;
+  position: fixed;
+  background: transparent;
+  top: 0;
+  left: 0;
+  transition: all 0.2s ease-in;
+  z-index: 500;
+}
+
+.header-scroll {
+  background-color: rgba(138, 166, 227, 0.9);
+}
+.header-scroll a,
+.header-scroll nav {
+  opacity: 0.8;
+  transition: all 0.2s ease-out;
+}
+.header-scroll:hover {
+  background-color: rgb(138, 166, 227);
+}
+.header-scroll:hover a,
+.header-scroll:hover nav {
+  opacity: 1;
+}
+
 .main__header {
   height: 20rem;
   width: 100%;
@@ -134,56 +161,46 @@ a {
     visibility: visible;
   }
   .dot {
-    transition: all 0.5s ease-in-out;
-    @apply absolute bg-blue-400 h-full w-1/3 rounded-full z-20;
+    transition: all 1s ease-in-out;
+    @apply absolute bg-blue-400 h-[2.5rem] w-[2.5rem] rounded-full z-20;
   }
 }
+*, *::before, *::after {
+  font-family: "Montserrat";
+}
+
 @layer base {
-  .mons {
-    font-family: "Montserrat";
-  }
   .text-header {
-    font-family: "Montserrat";
     @apply text-2xl font-bold mb-4 text-slate-600 dark:text-slate-100;
   }
   .text-regular {
-    font-family: "Montserrat";
     @apply text-base text-black dark:text-white;
   }
   .text-light {
-    font-family: "Montserrat";
     @apply text-gray-600 text-lg font-light;
   }
   .text-tiny {
-    font-family: "Montserrat";
     @apply text-[12px] text-gray-600;
   }
   .text-footer {
-    font-family: "Montserrat";
     @apply font-bold text-black text-base dark:text-white;
   }
   .blog-title-card {
-    font-family: "Montserrat";
     @apply text-xl font-extralight;
   }
   .blog-text-card {
-    font-family: "Montserrat";
     @apply text-base text-black;
   }
   .blog-title {
-    font-family: "Montserrat";
     @apply text-3xl text-slate-600 dark:text-slate-100;
   }
   .blog-text {
-    font-family: "Montserrat";
     @apply text-base text-black dark:text-slate-100;
   }
   .blog-nav-text {
-    font-family: "Montserrat";
     @apply text-base text-black dark:text-slate-100;
   }
   .text-nav {
-    font-family: "Montserrat";
     @apply text-sm text-black;
   }
 }
@@ -206,6 +223,17 @@ a {
     opacity: 1;
     @apply absolute opacity-100 rounded-full h-full w-full top-0 left-0 bg-slate-900 dark:bg-slate-100;
   }
+}
+.article__img {
+  height: 20rem;
+  width: 25rem;
+  position: relative;
+  outline: 1px red solid;
+  background-size: cover;
+  clip-path: circle(40% at 50% 50%);
+  -webkit-clip-path: circle(40% at 50% 50%);
+  shape-outside: circle(40% at 50% 50%);
+  -webkit-shape-outside: circle(40% at 50% 50%);
 }
 
 /*# sourceMappingURL=style.css.map */

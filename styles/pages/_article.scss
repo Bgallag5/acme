@@ -1,0 +1,20 @@
+.article__img {
+  height: 20rem;
+  width: 25rem;
+  position: relative;
+// float: right;
+  outline: 1px red solid;
+    background-size: cover;
+// //   justify-self: end;
+//   overflow: hidden;
+// //   margin: auto 0;
+
+// //   //WRAP TEXT AROUND AN ELEMENT
+// //   //define the shape of the element
+  clip-path: circle(40% at 50% 50%);
+  -webkit-clip-path: circle(40% at 50% 50%);
+// //   //define the SAME shape of the text around the element
+  shape-outside: circle(40% at 50% 50%);
+  -webkit-shape-outside: circle(40% at 50% 50%);
+
+}

@@ -1,51 +1,43 @@
+
+
+*, *::before, *::after{
+    font-family: "Montserrat";
+}
+
 @layer base{
 
     //TEXT
-    .mons{
-        font-family: 'Montserrat';
-    }
     .text-header{
-        font-family: 'Montserrat';
         @apply text-2xl font-bold mb-4 text-slate-600 dark:text-slate-100 ;
     } 
     .text-regular{
-        font-family: 'Montserrat';
         @apply text-base text-black dark:text-white;
     }
     .text-light{
-        font-family: 'Montserrat';
         @apply text-gray-600 text-lg font-light;
     }
     .text-tiny{
-        font-family: 'Montserrat';
         @apply text-[12px] text-gray-600;
     }
     .text-footer{
-        font-family: 'Montserrat';
         @apply font-bold text-black text-base dark:text-white;
     }
     .blog-title-card{
-        font-family: 'Montserrat';
         @apply text-xl font-extralight;
     }
     .blog-text-card{
-        font-family: 'Montserrat';
         @apply text-base text-black;
     }
     .blog-title{
-        font-family: 'Montserrat';
         @apply text-3xl text-slate-600 dark:text-slate-100;
     }
     .blog-text{
-        font-family: 'Montserrat';
         @apply text-base text-black dark:text-slate-100;
     }
     .blog-nav-text {
-        font-family: 'Montserrat';
         @apply text-base text-black dark:text-slate-100;
     }
     .text-nav{
-        font-family: 'Montserrat';
         @apply text-sm text-black ;
     }
 }

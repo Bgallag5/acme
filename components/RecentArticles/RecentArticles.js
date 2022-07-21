@@ -49,7 +49,7 @@ export default function RecentArticles() {
       </div>
       <div className="flex mt-8 w-full flex-row  gap-3 justify-center text-left ">
         <button className="slider__btn" onClick={() => handleSliderBtn("left")}><FontAwesomeIcon icon={faAngleLeft} /> </button>
-        <div className="relative w-full h-64 flex overflow-x-hidden items-center flex-row sm:flex-col gap-3">
+        <div className="relative w-[95%] h-64 flex overflow-x-hidden items-center flex-row sm:flex-col ">
           <Article title={"Article 1"} />
           <Article title={"Article 2"} />
           <Article title={"Article 3"} />

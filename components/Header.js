@@ -1,10 +1,11 @@
-import React, { useContext } from "react";
+import React, { useContext, useEffect, useRef } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import { AppContext } from "../pages/_app";
 
 export default function Header(props) {
   const { darkMode, toggleDarkMode } = useContext(AppContext);
+  const headerRef = useRef();
 
   const headerClass = props.className;
 
@@ -15,9 +16,25 @@ export default function Header(props) {
     return;
   };
 
+  
+  useEffect(() => {
+    window.addEventListener('scroll', () => {
+      console.log(window.scrollY);
+
+      if (window.scrollY >= 300){
+        headerRef.current.classList.add('header-scroll')
+      }
+    else if (window.scrollY < 300){
+        headerRef.current.classList.remove('header-scroll')
+      }
+    });
+
+
+  })
+
   return (
     <header className={`${headerClass}`}>
-      <div className={`${headerClass}-nav`}>
+      <div ref={headerRef} data-scroll={"0"} className={`${headerClass}-nav header`}>
         <a href="#" aria-label="home page">
           <Image 
             width={75}
