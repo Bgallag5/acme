@@ -1,10 +1,22 @@
-import React from "react";
+import React, {useContext} from "react";
 import Image from "next/image";
+import { AppContext } from "../../pages/_app";
+import { useRouter } from "next/router";
 
 export default function BlogArticle(props) {
   const { title, className, img, id } = props;
+  const {setSelectedArticle} = useContext(AppContext);
+  const router = useRouter()
+
+
+
+  const handleClickArticle = () => {
+    router.push(`/article`)
+  }
+
+
   return (
-    <div id={id} className={`bg-slate-100  shadow-md hover:shadow-xl relative w-auto h-auto flex flex-col text-left dark:bg-white rounded ${className} cursor-pointer `}>
+    <div onClick={() => handleClickArticle()} id={id} className={`bg-slate-100  shadow-md hover:shadow-xl relative w-auto h-auto flex flex-col text-left dark:bg-white rounded ${className} cursor-pointer `}>
       <Image
         className="rounded shadow-lg shadow-black"
         src={require(`../../assets/images/${img}`)}
@@ -21,3 +33,5 @@ export default function BlogArticle(props) {
     </div>
   );
 }
+
+

@@ -16,33 +16,26 @@ export default function Header(props) {
     return;
   };
 
-  
   useEffect(() => {
-    window.addEventListener('scroll', () => {
-      console.log(window.scrollY);
-      if (window.scrollY >= 5){
-        headerRef.current.classList.add('header__blue')
-      }
-      if (window.scrollY < 5){
-        headerRef.current.classList.remove('header__blue')
-      }
-
-      if (window.scrollY >= 300){
-        headerRef.current.classList.add('header-scroll')
-      }
-    else if (window.scrollY < 300){
-        headerRef.current.classList.remove('header-scroll')
+    window.addEventListener("scroll", () => {
+      if (window.scrollY >= 300) {
+        headerRef.current && headerRef.current.classList.add("header-scroll");
+      } else if (window.scrollY < 300) {
+        headerRef.current &&
+          headerRef.current.classList.remove("header-scroll");
       }
     });
-
-
-  })
+  });
 
   return (
     <header className={`${headerClass}`}>
-      <div ref={headerRef} data-scroll={"0"} className={`${headerClass}-nav header`}>
+      <div
+        ref={headerRef}
+        data-scroll={"0"}
+        className={`${headerClass}-nav header`}
+      >
         <a href="#" aria-label="home page">
-          <Image 
+          <Image
             width={75}
             height={40}
             alt="logo"
@@ -63,7 +56,9 @@ export default function Header(props) {
               onChange={handleToggleDarkMode}
               className={"dark-mode-input"}
             ></input>
-            <label htmlFor="dark-mode" className="dark-mode-label"><div className="dot"></div></label>
+            <label htmlFor="dark-mode" className="dark-mode-label">
+              <div className="dot"></div>
+            </label>
           </ul>
         </nav>
       </div>

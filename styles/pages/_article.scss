@@ -2,19 +2,25 @@
   height: 20rem;
   width: 25rem;
   position: relative;
-// float: right;
   outline: 1px red solid;
-    background-size: cover;
-// //   justify-self: end;
-//   overflow: hidden;
-// //   margin: auto 0;
+  background-size: cover;
 
-// //   //WRAP TEXT AROUND AN ELEMENT
-// //   //define the shape of the element
   clip-path: circle(40% at 50% 50%);
   -webkit-clip-path: circle(40% at 50% 50%);
-// //   //define the SAME shape of the text around the element
-  shape-outside: circle(40% at 50% 50%);
-  -webkit-shape-outside: circle(40% at 50% 50%);
+}
+
+
+.related{
+  height: 80vh;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+
+  &__articles{
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
+
+  }
 
 }

@@ -6,10 +6,14 @@ export const AppContext = React.createContext();
 
 function MyApp({ Component, pageProps }) {
   const [darkMode, toggleDarkMode] = useState(false);
+  const [selectedArticle, setSelectedArticle] = useState("");
+  
   
   const globalContext = {
     darkMode,
-    toggleDarkMode
+    toggleDarkMode,
+    selectedArticle,
+    setSelectedArticle
   }
 
 
